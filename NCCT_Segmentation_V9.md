@@ -1,7 +1,3 @@
-Here is a comprehensive specification you can provide directly to your coding agent to implement the loss functions for the MAGIC model.
-
----
-
 ### **System Context and Objective**
 
 **Goal:** Implement a custom multi-objective loss function in PyTorch for a Generative Adversarial Network (GAN) called MAGIC (Multitask Automated Generation of Intermodal CT perfusion maps).
@@ -9,11 +5,11 @@ Here is a comprehensive specification you can provide directly to your coding ag
 **Architecture Context:**
 The network translates a single domain input (Non-Contrast CT, or $X$) into four distinct target perfusion maps ($CTP$) simultaneously.
 
-* **$N$**: Number of perfusion maps, which is **4**.
-* **$PM$**: A specific Perfusion Map type where $PM \in \{CBV, CBF, MTT, TTP\}$.
-* **$x$**: The real input NCCT image.
-* **$G_{PM}(x)$**: The generated synthetic perfusion map for a specific type.
-* **$D_{PM}$**: The PatchGAN discriminator corresponding to a specific map type.
+- **$N$**: Number of perfusion maps, which is **4**.
+- **$PM$**: A specific Perfusion Map type where $PM \in \{CBV, CBF, MTT, TTP\}$.
+- **$x$**: The real input NCCT image.
+- **$G_{PM}(x)$**: The generated synthetic perfusion map for a specific type.
+- **$D_{PM}$**: The PatchGAN discriminator corresponding to a specific map type.
 
 ---
 
@@ -25,7 +21,7 @@ $$
 G^{*}=arg~min_{G_{CTP}}max_{D_{CTP}}\mathcal{L}_{GAN}(G_{CTP},D_{CTP},CTP,X)+\lambda_{1}\mathcal{L}_{L1}(G_{CTP},CTP,X)+\lambda_{2}\mathcal{L}_{EXT}(G_{CTP},CTP,X)+\lambda_{3}\mathcal{L}_{MML}(G_{CBF},G_{MTT},CBV,X)
 $$
 
-*Coding requirement:* The loss class/function should accept three hyperparameters ($\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$) to weight the loss components.
+_Coding requirement:_ The loss class/function should accept three hyperparameters ($\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$) to weight the loss components.
 
 ---
 
@@ -39,7 +35,7 @@ $$
 \mathcal{L}_{GAN}(G_{CTP},D_{CTP},CTP,X)=\frac{1}{N}\sum_{PM\in CTP}\mathbb{E}_{PM\sim p_{data}(PM)}[log~D_{PM}(PM)]+\mathbb{E}_{x\sim p_{data}(x)}[log(1-D_{PM}(G_{PM}(x)))]
 $$
 
-*Coding requirement:* Average the standard binary cross-entropy (BCE) adversarial loss across the 4 generated maps and their respective discriminators.
+_Coding requirement:_ Average the standard binary cross-entropy (BCE) adversarial loss across the 4 generated maps and their respective discriminators.
 
 #### **B. Structural Fidelity / L1 Loss ($\mathcal{L}_{L1}$)**
 
@@ -49,7 +45,7 @@ $$
 \mathcal{L}_{L1}(G_{CTP},CTP,X)=\frac{1}{N}\sum_{PM\in CTP}\mathbb{E}_{(x,PM)\sim(p_{data}(x),P_{data}(PM))}[\vert{}\vert{}PM-G_{PM}(x)\vert{}\vert{}_{1}]
 $$
 
-*Coding requirement:* Calculate the average L1 loss across all 4 map types.
+_Coding requirement:_ Calculate the average L1 loss across all 4 map types.
 
 #### **C. Multimodal Loss ($\mathcal{L}_{MML}$)**
 
@@ -59,7 +55,7 @@ $$
 \mathcal{L}_{MML}(G_{CBF},G_{MTT},CBV,X)=\mathbb{E}_{(x,CBV)\sim(p_{data}(x),p_{data}(CBV))}[\vert{}\vert{}G_{CBF}(x)\times G_{MTT}(x)-CBV\vert{}\vert{}_{1}]
 $$
 
-*Coding requirement:* Perform an element-wise multiplication of the generated CBF and MTT tensors, then compute the L1 loss against the ground-truth CBV tensor.
+_Coding requirement:_ Perform an element-wise multiplication of the generated CBF and MTT tensors, then compute the L1 loss against the ground-truth CBV tensor.
 
 #### **D. Extrema Loss ($\mathcal{L}_{EXT}$)**
 
@@ -86,6 +82,8 @@ $$
 \mathcal{L}_{EXT}(G_{CTP},CTP,X)=\frac{1}{N}\sum_{PM\in CTP}\mathbb{E}_{(x,PM)\sim(p_{data}(x),p_{data}(PM))}[W_{x}\odot H_{x}]
 $$
 
-*Coding requirement:* Be careful with PyTorch tensor dimensions during min-max normalization. Ensure the `min` and `max` operations are calculated per image (or per batch item appropriately) to avoid zero-division errors by adding a small epsilon.
+_Coding requirement:_ Be careful with PyTorch tensor dimensions during min-max normalization. Ensure the `min` and `max` operations are calculated per image (or per batch item appropriately) to avoid zero-division errors by adding a small epsilon.
 
-# ncct-seg-notebooks
+### **Reference Paper**
+
+Khan, W., Rees, J., See, K. B., Kato, S., Huang, Z., Lazarte, A., Douglas, K., Lou, X., Peng, T. J., Rajderkar, D., Sanelli, P., Singh, A., Tuna, I., Wilson, C. A., & Fang, R. (2026). Diagnostically Competitive Performance of a Physiology-Informed Generative Multi-Task Network for Contrast-Free CT Perfusion. _arXiv preprint arXiv:2505.22673v2_.
