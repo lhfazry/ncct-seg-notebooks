@@ -1,0 +1,29 @@
+{
+  "seed": 42,
+  "val_frac": 0.15,
+  "test_frac": 0.15,
+  "lvo_subdir": "selected_ncct",
+  "copy_images": true,
+  "total_patients": {
+    "train": 243,
+    "val": 52,
+    "test": 52
+  },
+  "stages": {
+    "stage1_lvo": {
+      "train_images": 8628,
+      "val_images": 1851,
+      "test_images": 1759
+    },
+    "stage2_laterality": {
+      "train_images": 2997,
+      "val_images": 497,
+      "test_images": 418
+    },
+    "stage3_etiology": {
+      "train_images": 2983,
+      "val_images": 497,
+      "test_images": 418
+    }
+  }
+}
