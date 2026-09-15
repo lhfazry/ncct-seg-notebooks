@@ -1,0 +1,355 @@
+6.2s	1	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.2s	2	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.2s	3	0.00s - to python to disable frozen modules.
+6.2s	4	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+6.8s	5	0.00s - Debugger warning: It seems that frozen modules are being used, which may
+6.8s	6	0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+6.8s	7	0.00s - to python to disable frozen modules.
+6.8s	8	0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+23.5s	9	Device: cuda
+23.6s	10	IS_KAGGLE: True | Mode: kaggle | Device: cuda
+23.6s	11	SPLIT_DIR: /kaggle/input/datasets/lhfazry/ncct-fixed
+23.6s	12	OUTPUT_DIR: /kaggle/working/outputs_v3
+23.6s	13	Backbones: ['resnet18', 'resnet50', 'efficientnet_b0', 'convnext_tiny']
+23.6s	14	Epochs: 15 | Monitor: patient_f1 | AMP: True | TTA: True | Resume: True
+23.6s	15	Seeds: [42] | Tuning threshold pd VAL: True
+23.6s	16	Mode kaggle → pakai dataset: /kaggle/input/datasets/lhfazry/ncct-fixed
+23.6s	17	Isi SPLIT_DIR: ['metadata', 'split_summary.json', 'test', 'train', 'val']
+43.3s	18	Jumlah citra & pasien per (stage, set):
+43.3s	19	  stage1_lvo             citra  T: 8628 V: 1851 Te: 1759  | pasien T:243 V: 52 Te: 52
+43.3s	20	  stage2_laterality      citra  T: 2997 V:  497 Te:  418  | pasien T:105 V: 19 Te: 20
+43.3s	21	  stage3_etiology        citra  T: 2983 V:  497 Te:  418  | pasien T:104 V: 19 Te: 20
+43.3s	22	✔ Split bebas data leakage antar set & konsisten antar stage.
+43.8s	23	Slice/pasien (train stage1): mean=35.5  median=40  max=56
+44.2s	24	Sesi berjalan 0.00 jam (limit GPU Kaggle ≈ 12 jam/sesi, kuota ≈ 30 jam/minggu).
+44.2s	25	OUTPUT_DIR: /kaggle/working/outputs_v3
+44.2s	26	Checkpoint (*.pt): 0 file
+44.7s	27	
+44.7s	28	========================================================================
+44.7s	29	STAGE stage1_lvo | distribusi train: {0: np.int64(5592), 1: np.int64(3036)}
+44.7s	30	========================================================================
+44.7s	31	Citra train: 8628 | val: 1851 | test: 1759
+109.6s	32	[stage1_lvo_resnet18] epoch 01/15 | train_loss=0.5766 | val_img_f1=0.9322 | val_pat_f1=0.9730
+157.3s	33	[stage1_lvo_resnet18] epoch 02/15 | train_loss=0.1104 | val_img_f1=0.9910 | val_pat_f1=1.0000
+205.2s	34	[stage1_lvo_resnet18] epoch 03/15 | train_loss=0.0244 | val_img_f1=0.9900 | val_pat_f1=1.0000
+253.4s	35	[stage1_lvo_resnet18] epoch 04/15 | train_loss=0.0138 | val_img_f1=0.9950 | val_pat_f1=1.0000
+302.0s	36	[stage1_lvo_resnet18] epoch 05/15 | train_loss=0.0082 | val_img_f1=0.9980 | val_pat_f1=1.0000
+350.4s	37	[stage1_lvo_resnet18] epoch 06/15 | train_loss=0.0052 | val_img_f1=0.9990 | val_pat_f1=1.0000
+399.8s	38	[stage1_lvo_resnet18] epoch 07/15 | train_loss=0.0035 | val_img_f1=0.9929 | val_pat_f1=1.0000
+447.7s	39	[stage1_lvo_resnet18] epoch 08/15 | train_loss=0.0027 | val_img_f1=0.9980 | val_pat_f1=1.0000
+448.1s	40	  >> Early stop di epoch 8 (best patient_f1=1.0000 di epoch 2)
+448.1s	41	[stage1_lvo_resnet18] Selesai. Best patient_f1 = 1.0000 (epoch 2)
+466.1s	42	  ✔ resnet18 (seed=42) | VAL img_f1=0.9910 pat_f1=1.0000 | TEST img_f1=0.9952 pat_f1=1.0000
+524.5s	43	[stage1_lvo_resnet50] epoch 01/15 | train_loss=0.6243 | val_img_f1=0.8784 | val_pat_f1=0.9730
+581.9s	44	[stage1_lvo_resnet50] epoch 02/15 | train_loss=0.1321 | val_img_f1=0.9773 | val_pat_f1=1.0000
+638.5s	45	[stage1_lvo_resnet50] epoch 03/15 | train_loss=0.0272 | val_img_f1=0.9930 | val_pat_f1=1.0000
+696.1s	46	[stage1_lvo_resnet50] epoch 04/15 | train_loss=0.0128 | val_img_f1=0.9868 | val_pat_f1=1.0000
+753.1s	47	[stage1_lvo_resnet50] epoch 05/15 | train_loss=0.0068 | val_img_f1=0.9960 | val_pat_f1=1.0000
+810.4s	48	[stage1_lvo_resnet50] epoch 06/15 | train_loss=0.0051 | val_img_f1=0.9970 | val_pat_f1=1.0000
+867.8s	49	[stage1_lvo_resnet50] epoch 07/15 | train_loss=0.0052 | val_img_f1=0.9970 | val_pat_f1=1.0000
+925.7s	50	[stage1_lvo_resnet50] epoch 08/15 | train_loss=0.0016 | val_img_f1=0.9990 | val_pat_f1=1.0000
+926.4s	51	  >> Early stop di epoch 8 (best patient_f1=1.0000 di epoch 2)
+926.4s	52	[stage1_lvo_resnet50] Selesai. Best patient_f1 = 1.0000 (epoch 2)
+949.5s	53	  ✔ resnet50 (seed=42) | VAL img_f1=0.9773 pat_f1=1.0000 | TEST img_f1=0.9857 pat_f1=1.0000
+949.5s	54	Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+949.5s	55	
+949.5s	56	Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+1019.8s	57	[stage1_lvo_efficientnet_b0] epoch 01/15 | train_loss=0.4848 | val_img_f1=0.9633 | val_pat_f1=1.0000
+1069.6s	58	[stage1_lvo_efficientnet_b0] epoch 02/15 | train_loss=0.0662 | val_img_f1=0.9939 | val_pat_f1=1.0000
+1119.1s	59	[stage1_lvo_efficientnet_b0] epoch 03/15 | train_loss=0.0183 | val_img_f1=0.9950 | val_pat_f1=1.0000
+1169.1s	60	[stage1_lvo_efficientnet_b0] epoch 04/15 | train_loss=0.0137 | val_img_f1=0.9919 | val_pat_f1=1.0000
+1219.0s	61	[stage1_lvo_efficientnet_b0] epoch 05/15 | train_loss=0.0079 | val_img_f1=0.9929 | val_pat_f1=1.0000
+1269.0s	62	[stage1_lvo_efficientnet_b0] epoch 06/15 | train_loss=0.0045 | val_img_f1=0.9970 | val_pat_f1=1.0000
+1318.7s	63	[stage1_lvo_efficientnet_b0] epoch 07/15 | train_loss=0.0012 | val_img_f1=0.9960 | val_pat_f1=1.0000
+1318.9s	64	  >> Early stop di epoch 7 (best patient_f1=1.0000 di epoch 1)
+1319.0s	65	[stage1_lvo_efficientnet_b0] Selesai. Best patient_f1 = 1.0000 (epoch 1)
+1335.3s	66	  ✔ efficientnet_b0 (seed=42) | VAL img_f1=0.9633 pat_f1=1.0000 | TEST img_f1=0.9623 pat_f1=0.9744
+1425.0s	67	[stage1_lvo_convnext_tiny] epoch 01/15 | train_loss=0.0695 | val_img_f1=0.9890 | val_pat_f1=1.0000
+1486.9s	68	[stage1_lvo_convnext_tiny] epoch 02/15 | train_loss=0.1370 | val_img_f1=0.9900 | val_pat_f1=1.0000
+1549.7s	69	[stage1_lvo_convnext_tiny] epoch 03/15 | train_loss=0.0230 | val_img_f1=0.9847 | val_pat_f1=1.0000
+1611.7s	70	[stage1_lvo_convnext_tiny] epoch 04/15 | train_loss=0.0148 | val_img_f1=0.9868 | val_pat_f1=1.0000
+1673.7s	71	[stage1_lvo_convnext_tiny] epoch 05/15 | train_loss=0.0063 | val_img_f1=0.9970 | val_pat_f1=1.0000
+1735.9s	72	[stage1_lvo_convnext_tiny] epoch 06/15 | train_loss=0.0056 | val_img_f1=0.9970 | val_pat_f1=1.0000
+1798.9s	73	[stage1_lvo_convnext_tiny] epoch 07/15 | train_loss=0.0026 | val_img_f1=0.9909 | val_pat_f1=1.0000
+1799.6s	74	  >> Early stop di epoch 7 (best patient_f1=1.0000 di epoch 1)
+1799.6s	75	[stage1_lvo_convnext_tiny] Selesai. Best patient_f1 = 1.0000 (epoch 1)
+1832.8s	76	  ✔ convnext_tiny (seed=42) | VAL img_f1=0.9890 pat_f1=1.0000 | TEST img_f1=0.9964 pat_f1=1.0000
+1832.8s	77	
+1832.8s	78	========================================================================
+1832.8s	79	STAGE stage2_laterality | distribusi train: {0: np.int64(1778), 1: np.int64(1219)}
+1832.8s	80	========================================================================
+1832.8s	81	Citra train: 2997 | val: 497 | test: 418
+1849.4s	82	[stage2_laterality_resnet18] epoch 01/15 | train_loss=0.6951 | val_img_f1=0.5356 | val_pat_f1=0.5000
+1866.0s	83	[stage2_laterality_resnet18] epoch 02/15 | train_loss=0.6539 | val_img_f1=0.4633 | val_pat_f1=0.3158
+1882.6s	84	[stage2_laterality_resnet18] epoch 03/15 | train_loss=0.5481 | val_img_f1=0.4847 | val_pat_f1=0.5263
+1899.3s	85	[stage2_laterality_resnet18] epoch 04/15 | train_loss=0.4039 | val_img_f1=0.5333 | val_pat_f1=0.5263
+1916.6s	86	[stage2_laterality_resnet18] epoch 05/15 | train_loss=0.2781 | val_img_f1=0.5624 | val_pat_f1=0.5714
+1933.5s	87	[stage2_laterality_resnet18] epoch 06/15 | train_loss=0.1825 | val_img_f1=0.5574 | val_pat_f1=0.5263
+1950.4s	88	[stage2_laterality_resnet18] epoch 07/15 | train_loss=0.1315 | val_img_f1=0.6145 | val_pat_f1=0.6000
+1967.2s	89	[stage2_laterality_resnet18] epoch 08/15 | train_loss=0.0843 | val_img_f1=0.5672 | val_pat_f1=0.5714
+1984.2s	90	[stage2_laterality_resnet18] epoch 09/15 | train_loss=0.0607 | val_img_f1=0.5838 | val_pat_f1=0.6957
+2000.7s	91	[stage2_laterality_resnet18] epoch 10/15 | train_loss=0.0487 | val_img_f1=0.5351 | val_pat_f1=0.5455
+2017.7s	92	[stage2_laterality_resnet18] epoch 11/15 | train_loss=0.0446 | val_img_f1=0.5783 | val_pat_f1=0.6667
+2034.5s	93	[stage2_laterality_resnet18] epoch 12/15 | train_loss=0.0359 | val_img_f1=0.5803 | val_pat_f1=0.7273
+2051.3s	94	[stage2_laterality_resnet18] epoch 13/15 | train_loss=0.0323 | val_img_f1=0.5777 | val_pat_f1=0.6364
+2068.3s	95	[stage2_laterality_resnet18] epoch 14/15 | train_loss=0.0286 | val_img_f1=0.5740 | val_pat_f1=0.6000
+2085.2s	96	[stage2_laterality_resnet18] epoch 15/15 | train_loss=0.0280 | val_img_f1=0.5833 | val_pat_f1=0.6957
+2085.8s	97	[stage2_laterality_resnet18] Selesai. Best patient_f1 = 0.7273 (epoch 12)
+2090.6s	98	  ✔ resnet18 (seed=42) | VAL img_f1=0.5803 pat_f1=0.7273 | TEST img_f1=0.5411 pat_f1=0.4444
+2110.3s	99	[stage2_laterality_resnet50] epoch 01/15 | train_loss=0.6912 | val_img_f1=0.4785 | val_pat_f1=0.4211
+2130.1s	100	[stage2_laterality_resnet50] epoch 02/15 | train_loss=0.6736 | val_img_f1=0.4600 | val_pat_f1=0.4000
+2150.7s	101	[stage2_laterality_resnet50] epoch 03/15 | train_loss=0.5800 | val_img_f1=0.5313 | val_pat_f1=0.6667
+2170.3s	102	[stage2_laterality_resnet50] epoch 04/15 | train_loss=0.4166 | val_img_f1=0.5672 | val_pat_f1=0.6087
+2190.6s	103	[stage2_laterality_resnet50] epoch 05/15 | train_loss=0.2649 | val_img_f1=0.5347 | val_pat_f1=0.6316
+2211.2s	104	[stage2_laterality_resnet50] epoch 06/15 | train_loss=0.1597 | val_img_f1=0.5516 | val_pat_f1=0.5714
+2231.8s	105	[stage2_laterality_resnet50] epoch 07/15 | train_loss=0.0930 | val_img_f1=0.5774 | val_pat_f1=0.6316
+2252.2s	106	[stage2_laterality_resnet50] epoch 08/15 | train_loss=0.0591 | val_img_f1=0.5671 | val_pat_f1=0.6316
+2272.9s	107	[stage2_laterality_resnet50] epoch 09/15 | train_loss=0.0453 | val_img_f1=0.5896 | val_pat_f1=0.6000
+2273.5s	108	  >> Early stop di epoch 9 (best patient_f1=0.6667 di epoch 3)
+2273.5s	109	[stage2_laterality_resnet50] Selesai. Best patient_f1 = 0.6667 (epoch 3)
+2280.2s	110	  ✔ resnet50 (seed=42) | VAL img_f1=0.5313 pat_f1=0.6667 | TEST img_f1=0.4779 pat_f1=0.5263
+2306.8s	111	[stage2_laterality_efficientnet_b0] epoch 01/15 | train_loss=1.7742 | val_img_f1=0.5954 | val_pat_f1=0.5714
+2324.7s	112	[stage2_laterality_efficientnet_b0] epoch 02/15 | train_loss=0.8201 | val_img_f1=0.5720 | val_pat_f1=0.6667
+2342.4s	113	[stage2_laterality_efficientnet_b0] epoch 03/15 | train_loss=0.3247 | val_img_f1=0.5499 | val_pat_f1=0.6316
+2359.9s	114	[stage2_laterality_efficientnet_b0] epoch 04/15 | train_loss=0.1924 | val_img_f1=0.5919 | val_pat_f1=0.5714
+2377.6s	115	[stage2_laterality_efficientnet_b0] epoch 05/15 | train_loss=0.1187 | val_img_f1=0.5496 | val_pat_f1=0.5714
+2395.5s	116	[stage2_laterality_efficientnet_b0] epoch 06/15 | train_loss=0.0721 | val_img_f1=0.5133 | val_pat_f1=0.6000
+2413.0s	117	[stage2_laterality_efficientnet_b0] epoch 07/15 | train_loss=0.0606 | val_img_f1=0.5202 | val_pat_f1=0.5714
+2430.6s	118	[stage2_laterality_efficientnet_b0] epoch 08/15 | train_loss=0.0238 | val_img_f1=0.5221 | val_pat_f1=0.5000
+2430.8s	119	  >> Early stop di epoch 8 (best patient_f1=0.6667 di epoch 2)
+2430.9s	120	[stage2_laterality_efficientnet_b0] Selesai. Best patient_f1 = 0.6667 (epoch 2)
+2435.7s	121	  ✔ efficientnet_b0 (seed=42) | VAL img_f1=0.5720 pat_f1=0.6667 | TEST img_f1=0.5079 pat_f1=0.4211
+2469.9s	122	[stage2_laterality_convnext_tiny] epoch 01/15 | train_loss=0.6232 | val_img_f1=0.5647 | val_pat_f1=0.4706
+2491.5s	123	[stage2_laterality_convnext_tiny] epoch 02/15 | train_loss=0.6157 | val_img_f1=0.6462 | val_pat_f1=0.6316
+2513.4s	124	[stage2_laterality_convnext_tiny] epoch 03/15 | train_loss=0.3009 | val_img_f1=0.5917 | val_pat_f1=0.6000
+2535.2s	125	[stage2_laterality_convnext_tiny] epoch 04/15 | train_loss=0.1737 | val_img_f1=0.7013 | val_pat_f1=0.6316
+2557.2s	126	[stage2_laterality_convnext_tiny] epoch 05/15 | train_loss=0.1238 | val_img_f1=0.6692 | val_pat_f1=0.6000
+2579.4s	127	[stage2_laterality_convnext_tiny] epoch 06/15 | train_loss=0.0676 | val_img_f1=0.6045 | val_pat_f1=0.5714
+2601.4s	128	[stage2_laterality_convnext_tiny] epoch 07/15 | train_loss=0.0720 | val_img_f1=0.6704 | val_pat_f1=0.6667
+2622.9s	129	[stage2_laterality_convnext_tiny] epoch 08/15 | train_loss=0.0406 | val_img_f1=0.6615 | val_pat_f1=0.5556
+2645.1s	130	[stage2_laterality_convnext_tiny] epoch 09/15 | train_loss=0.0261 | val_img_f1=0.6729 | val_pat_f1=0.6667
+2667.2s	131	[stage2_laterality_convnext_tiny] epoch 10/15 | train_loss=0.0106 | val_img_f1=0.6280 | val_pat_f1=0.6364
+2689.5s	132	[stage2_laterality_convnext_tiny] epoch 11/15 | train_loss=0.0034 | val_img_f1=0.6579 | val_pat_f1=0.6000
+2711.5s	133	[stage2_laterality_convnext_tiny] epoch 12/15 | train_loss=0.0001 | val_img_f1=0.6493 | val_pat_f1=0.6364
+2733.7s	134	[stage2_laterality_convnext_tiny] epoch 13/15 | train_loss=0.0001 | val_img_f1=0.6478 | val_pat_f1=0.6364
+2734.3s	135	  >> Early stop di epoch 13 (best patient_f1=0.6667 di epoch 7)
+2734.3s	136	[stage2_laterality_convnext_tiny] Selesai. Best patient_f1 = 0.6667 (epoch 7)
+2745.1s	137	  ✔ convnext_tiny (seed=42) | VAL img_f1=0.6704 pat_f1=0.6667 | TEST img_f1=0.6217 pat_f1=0.6667
+2745.1s	138	
+2745.1s	139	========================================================================
+2745.1s	140	STAGE stage3_etiology | distribusi train: {0: np.int64(2098), 1: np.int64(885)}
+2745.1s	141	========================================================================
+2745.1s	142	Citra train: 2983 | val: 497 | test: 418
+2761.9s	143	[stage3_etiology_resnet18] epoch 01/15 | train_loss=0.6857 | val_img_f1=0.2685 | val_pat_f1=0.2667
+2778.9s	144	[stage3_etiology_resnet18] epoch 02/15 | train_loss=0.6379 | val_img_f1=0.3189 | val_pat_f1=0.4000
+2795.7s	145	[stage3_etiology_resnet18] epoch 03/15 | train_loss=0.5450 | val_img_f1=0.2838 | val_pat_f1=0.2222
+2812.8s	146	[stage3_etiology_resnet18] epoch 04/15 | train_loss=0.4404 | val_img_f1=0.2921 | val_pat_f1=0.2500
+2829.8s	147	[stage3_etiology_resnet18] epoch 05/15 | train_loss=0.3479 | val_img_f1=0.3273 | val_pat_f1=0.2857
+2847.2s	148	[stage3_etiology_resnet18] epoch 06/15 | train_loss=0.2783 | val_img_f1=0.2778 | val_pat_f1=0.2000
+2864.2s	149	[stage3_etiology_resnet18] epoch 07/15 | train_loss=0.2169 | val_img_f1=0.2977 | val_pat_f1=0.2000
+2881.2s	150	[stage3_etiology_resnet18] epoch 08/15 | train_loss=0.1720 | val_img_f1=0.2814 | val_pat_f1=0.1818
+2881.5s	151	  >> Early stop di epoch 8 (best patient_f1=0.4000 di epoch 2)
+2881.5s	152	[stage3_etiology_resnet18] Selesai. Best patient_f1 = 0.4000 (epoch 2)
+2886.1s	153	  ✔ resnet18 (seed=42) | VAL img_f1=0.3189 pat_f1=0.4000 | TEST img_f1=0.4407 pat_f1=0.5000
+2905.7s	154	[stage3_etiology_resnet50] epoch 01/15 | train_loss=0.6916 | val_img_f1=0.1918 | val_pat_f1=0.2222
+2925.7s	155	[stage3_etiology_resnet50] epoch 02/15 | train_loss=0.6674 | val_img_f1=0.3242 | val_pat_f1=0.4000
+2945.8s	156	[stage3_etiology_resnet50] epoch 03/15 | train_loss=0.5767 | val_img_f1=0.3209 | val_pat_f1=0.3333
+2966.2s	157	[stage3_etiology_resnet50] epoch 04/15 | train_loss=0.4564 | val_img_f1=0.3754 | val_pat_f1=0.4000
+2986.6s	158	[stage3_etiology_resnet50] epoch 05/15 | train_loss=0.3536 | val_img_f1=0.3415 | val_pat_f1=0.3333
+3007.3s	159	[stage3_etiology_resnet50] epoch 06/15 | train_loss=0.2784 | val_img_f1=0.3754 | val_pat_f1=0.4000
+3027.6s	160	[stage3_etiology_resnet50] epoch 07/15 | train_loss=0.2052 | val_img_f1=0.3207 | val_pat_f1=0.3333
+3048.1s	161	[stage3_etiology_resnet50] epoch 08/15 | train_loss=0.1457 | val_img_f1=0.3295 | val_pat_f1=0.3636
+3048.7s	162	  >> Early stop di epoch 8 (best patient_f1=0.4000 di epoch 2)
+3048.7s	163	[stage3_etiology_resnet50] Selesai. Best patient_f1 = 0.4000 (epoch 2)
+3055.4s	164	  ✔ resnet50 (seed=42) | VAL img_f1=0.3242 pat_f1=0.4000 | TEST img_f1=0.5090 pat_f1=0.4000
+3082.4s	165	[stage3_etiology_efficientnet_b0] epoch 01/15 | train_loss=1.9278 | val_img_f1=0.3019 | val_pat_f1=0.3636
+3100.0s	166	[stage3_etiology_efficientnet_b0] epoch 02/15 | train_loss=0.8831 | val_img_f1=0.3345 | val_pat_f1=0.4444
+3117.5s	167	[stage3_etiology_efficientnet_b0] epoch 03/15 | train_loss=0.3557 | val_img_f1=0.3412 | val_pat_f1=0.3636
+3135.1s	168	[stage3_etiology_efficientnet_b0] epoch 04/15 | train_loss=0.2135 | val_img_f1=0.3630 | val_pat_f1=0.4000
+3152.6s	169	[stage3_etiology_efficientnet_b0] epoch 05/15 | train_loss=0.1572 | val_img_f1=0.3453 | val_pat_f1=0.4444
+3169.8s	170	[stage3_etiology_efficientnet_b0] epoch 06/15 | train_loss=0.0922 | val_img_f1=0.3772 | val_pat_f1=0.4000
+3187.4s	171	[stage3_etiology_efficientnet_b0] epoch 07/15 | train_loss=0.0694 | val_img_f1=0.3788 | val_pat_f1=0.4444
+3205.0s	172	[stage3_etiology_efficientnet_b0] epoch 08/15 | train_loss=0.0367 | val_img_f1=0.4000 | val_pat_f1=0.2500
+3205.2s	173	  >> Early stop di epoch 8 (best patient_f1=0.4444 di epoch 2)
+3205.2s	174	[stage3_etiology_efficientnet_b0] Selesai. Best patient_f1 = 0.4444 (epoch 2)
+3209.9s	175	  ✔ efficientnet_b0 (seed=42) | VAL img_f1=0.3345 pat_f1=0.4444 | TEST img_f1=0.3122 pat_f1=0.2857
+3239.0s	176	[stage3_etiology_convnext_tiny] epoch 01/15 | train_loss=0.6480 | val_img_f1=0.3425 | val_pat_f1=0.4000
+3260.4s	177	[stage3_etiology_convnext_tiny] epoch 02/15 | train_loss=0.6238 | val_img_f1=0.3701 | val_pat_f1=0.4444
+3282.1s	178	[stage3_etiology_convnext_tiny] epoch 03/15 | train_loss=0.4044 | val_img_f1=0.3547 | val_pat_f1=0.3333
+3304.0s	179	[stage3_etiology_convnext_tiny] epoch 04/15 | train_loss=0.2476 | val_img_f1=0.4603 | val_pat_f1=0.5714
+3326.2s	180	[stage3_etiology_convnext_tiny] epoch 05/15 | train_loss=0.1367 | val_img_f1=0.3231 | val_pat_f1=0.3333
+3348.0s	181	[stage3_etiology_convnext_tiny] epoch 06/15 | train_loss=0.1205 | val_img_f1=0.3701 | val_pat_f1=0.3636
+3370.7s	182	[stage3_etiology_convnext_tiny] epoch 07/15 | train_loss=0.0518 | val_img_f1=0.4554 | val_pat_f1=0.5714
+3393.0s	183	[stage3_etiology_convnext_tiny] epoch 08/15 | train_loss=0.0488 | val_img_f1=0.3813 | val_pat_f1=0.4000
+3415.2s	184	[stage3_etiology_convnext_tiny] epoch 09/15 | train_loss=0.0367 | val_img_f1=0.4303 | val_pat_f1=0.5714
+3437.5s	185	[stage3_etiology_convnext_tiny] epoch 10/15 | train_loss=0.0096 | val_img_f1=0.4365 | val_pat_f1=0.4444
+3438.3s	186	  >> Early stop di epoch 10 (best patient_f1=0.5714 di epoch 4)
+3438.3s	187	[stage3_etiology_convnext_tiny] Selesai. Best patient_f1 = 0.5714 (epoch 4)
+3447.0s	188	  ✔ convnext_tiny (seed=42) | VAL img_f1=0.4603 pat_f1=0.5714 | TEST img_f1=0.3519 pat_f1=0.2222
+3447.0s	189	
+3447.0s	190	⏱ Total waktu: 56.7 menit
+3447.2s	191	
+3447.2s	192	### stage1_lvo — level **test**
+3447.2s	193	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	194	|---|---|---|---|---|---|
+3447.2s	195	| resnet18 | 0.9977±0.0000 | 0.9952±0.0000 | 0.9952±0.0000 | 0.9952±0.0000 | 1.0000±0.0000 |
+3447.2s	196	| resnet50 | 0.9932±0.0000 | 0.9788±0.0000 | 0.9928±0.0000 | 0.9857±0.0000 | 0.9999±0.0000 |
+3447.2s	197	| efficientnet_b0 | 0.9824±0.0000 | 0.9778±0.0000 | 0.9474±0.0000 | 0.9623±0.0000 | 0.9984±0.0000 |
+3447.2s	198	| convnext_tiny | 0.9983±0.0000 | 0.9929±0.0000 | 1.0000±0.0000 | 0.9964±0.0000 | 1.0000±0.0000 |
+3447.2s	199	
+3447.2s	200	### stage2_laterality — level **test**
+3447.2s	201	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	202	|---|---|---|---|---|---|
+3447.2s	203	| resnet18 | 0.5861±0.0000 | 0.5426±0.0000 | 0.5397±0.0000 | 0.5411±0.0000 | 0.6272±0.0000 |
+3447.2s	204	| resnet50 | 0.5191±0.0000 | 0.4694±0.0000 | 0.4868±0.0000 | 0.4779±0.0000 | 0.5352±0.0000 |
+3447.2s	205	| efficientnet_b0 | 0.5550±0.0000 | 0.5079±0.0000 | 0.5079±0.0000 | 0.5079±0.0000 | 0.5220±0.0000 |
+3447.2s	206	| convnext_tiny | 0.6914±0.0000 | 0.6974±0.0000 | 0.5608±0.0000 | 0.6217±0.0000 | 0.6309±0.0000 |
+3447.2s	207	
+3447.2s	208	### stage3_etiology — level **test**
+3447.2s	209	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	210	|---|---|---|---|---|---|
+3447.2s	211	| resnet18 | 0.6842±0.0000 | 0.4444±0.0000 | 0.4370±0.0000 | 0.4407±0.0000 | 0.7028±0.0000 |
+3447.2s	212	| resnet50 | 0.6722±0.0000 | 0.4437±0.0000 | 0.5966±0.0000 | 0.5090±0.0000 | 0.7234±0.0000 |
+3447.2s	213	| efficientnet_b0 | 0.6627±0.0000 | 0.3721±0.0000 | 0.2689±0.0000 | 0.3122±0.0000 | 0.6151±0.0000 |
+3447.2s	214	| convnext_tiny | 0.6388±0.0000 | 0.3596±0.0000 | 0.3445±0.0000 | 0.3519±0.0000 | 0.7044±0.0000 |
+3447.2s	215	
+3447.2s	216	### stage1_lvo — level **patient**
+3447.2s	217	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	218	|---|---|---|---|---|---|
+3447.2s	219	| resnet18 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	220	| resnet50 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	221	| efficientnet_b0 | 0.9808±0.0000 | 1.0000±0.0000 | 0.9500±0.0000 | 0.9744±0.0000 | 1.0000±0.0000 |
+3447.2s	222	| convnext_tiny | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	223	
+3447.2s	224	### stage2_laterality — level **patient**
+3447.2s	225	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	226	|---|---|---|---|---|---|
+3447.2s	227	| resnet18 | 0.5000±0.0000 | 0.4444±0.0000 | 0.4444±0.0000 | 0.4444±0.0000 | 0.5758±0.0000 |
+3447.2s	228	| resnet50 | 0.5500±0.0000 | 0.5000±0.0000 | 0.5556±0.0000 | 0.5263±0.0000 | 0.5556±0.0000 |
+3447.2s	229	| efficientnet_b0 | 0.4500±0.0000 | 0.4000±0.0000 | 0.4444±0.0000 | 0.4211±0.0000 | 0.4646±0.0000 |
+3447.2s	230	| convnext_tiny | 0.7000±0.0000 | 0.6667±0.0000 | 0.6667±0.0000 | 0.6667±0.0000 | 0.6061±0.0000 |
+3447.2s	231	
+3447.2s	232	### stage3_etiology — level **patient**
+3447.2s	233	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	234	|---|---|---|---|---|---|
+3447.2s	235	| resnet18 | 0.7000±0.0000 | 0.5000±0.0000 | 0.5000±0.0000 | 0.5000±0.0000 | 0.6905±0.0000 |
+3447.2s	236	| resnet50 | 0.7000±0.0000 | 0.5000±0.0000 | 0.3333±0.0000 | 0.4000±0.0000 | 0.7500±0.0000 |
+3447.2s	237	| efficientnet_b0 | 0.7500±0.0000 | 1.0000±0.0000 | 0.1667±0.0000 | 0.2857±0.0000 | 0.5357±0.0000 |
+3447.2s	238	| convnext_tiny | 0.6500±0.0000 | 0.3333±0.0000 | 0.1667±0.0000 | 0.2222±0.0000 | 0.6071±0.0000 |
+3447.2s	239	
+3447.2s	240	### stage1_lvo — level **val_patient**
+3447.2s	241	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	242	|---|---|---|---|---|---|
+3447.2s	243	| resnet18 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	244	| resnet50 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	245	| efficientnet_b0 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	246	| convnext_tiny | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 | 1.0000±0.0000 |
+3447.2s	247	
+3447.2s	248	### stage2_laterality — level **val_patient**
+3447.2s	249	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	250	|---|---|---|---|---|---|
+3447.2s	251	| resnet18 | 0.6842±0.0000 | 0.7273±0.0000 | 0.7273±0.0000 | 0.7273±0.0000 | 0.6250±0.0000 |
+3447.2s	252	| resnet50 | 0.6316±0.0000 | 0.7000±0.0000 | 0.6364±0.0000 | 0.6667±0.0000 | 0.6364±0.0000 |
+3447.2s	253	| efficientnet_b0 | 0.6316±0.0000 | 0.7000±0.0000 | 0.6364±0.0000 | 0.6667±0.0000 | 0.6818±0.0000 |
+3447.2s	254	| convnext_tiny | 0.6316±0.0000 | 0.7000±0.0000 | 0.6364±0.0000 | 0.6667±0.0000 | 0.7273±0.0000 |
+3447.2s	255	
+3447.2s	256	### stage3_etiology — level **val_patient**
+3447.2s	257	| Backbone | Accuracy | Precision | Recall | F1 | Auc |
+3447.2s	258	|---|---|---|---|---|---|
+3447.2s	259	| resnet18 | 0.6842±0.0000 | 0.3333±0.0000 | 0.5000±0.0000 | 0.4000±0.0000 | 0.5500±0.0000 |
+3447.2s	260	| resnet50 | 0.6842±0.0000 | 0.3333±0.0000 | 0.5000±0.0000 | 0.4000±0.0000 | 0.6000±0.0000 |
+3447.2s	261	| efficientnet_b0 | 0.7368±0.0000 | 0.4000±0.0000 | 0.5000±0.0000 | 0.4444±0.0000 | 0.5000±0.0000 |
+3447.2s	262	| convnext_tiny | 0.8421±0.0000 | 0.6667±0.0000 | 0.5000±0.0000 | 0.5714±0.0000 | 0.5667±0.0000 |
+3447.2s	263	Tersimpan:
+3447.2s	264	   /kaggle/working/outputs_v3/ablation_results_20260911_085831.json
+3447.2s	265	   /kaggle/working/outputs_v3/ablation_summary_20260911_085831.csv
+3447.2s	266	   /kaggle/working/outputs_v3/ablation_report_20260911_085831.md
+3447.2s	267	   /kaggle/working/outputs_v3/config_snapshot.json
+3448.3s	268	1) Backbone terbaik per stage (F1 level PASIEN, VAL):
+3448.3s	269	     stage1_lvo             → resnet18
+3448.3s	270	     stage2_laterality      → resnet18
+3448.3s	271	     stage3_etiology        → convnext_tiny
+3448.3s	272	
+3448.3s	273	2) Agregator slice terbaik (thr 0.5, VAL):
+3448.3s	274	     stage1_lvo             → mean   {'mean': 1.0, 'median': 1.0, 'max': 0.927, 'vote': 1.0}
+3448.3s	275	     stage2_laterality      → max   {'mean': 0.727, 'median': 0.571, 'max': 0.759, 'vote': 0.571}
+3448.3s	276	     stage3_etiology        → mean   {'mean': 0.571, 'median': 0.5, 'max': 0.267, 'vote': 0.5}
+3449.4s	277	
+3449.4s	278	3) Threshold optimal (VAL, maks F1 level pasien):
+3449.4s	279	     stage1_lvo             → 0.14
+3449.4s	280	     stage2_laterality      → 0.44
+3449.4s	281	     stage3_etiology        → 0.72
+3449.5s	282	
+3449.5s	283	Keputusan tersimpan: /kaggle/working/outputs_v3/decisions_20260911_085834.json
+3449.5s	284	
+3449.5s	285	⚠ Metrik TEST final dilaporkan SEKALI di bagian 13 — set ini tidak dipakai utk seleksi apa pun.
+3450.8s	286	Model terbaik dimuat (seleksi berdasar VAL):
+3450.8s	287	  stage1_lvo             → resnet18 (agg=mean, thr=0.14)
+3450.8s	288	  stage2_laterality      → resnet18 (agg=max, thr=0.44)
+3450.8s	289	  stage3_etiology        → convnext_tiny (agg=mean, thr=0.72)
+3516.4s	290	===== PIPELINE LEVEL PASIEN — TEST (1x pakai) =====
+3516.4s	291	  Stage 1 (prediksi-gate, semua test)   : acc=1.000 prec=1.000 rec=1.000 f1=1.000 auc=1.000 (n=52)
+3516.4s	292	  stage2_laterality      (PREDIKsi-gate, diprediksi LVO): acc=0.450 prec=0.450 rec=1.000 f1=0.621 auc=0.586 (n=20)
+3516.4s	293	  stage3_etiology        (PREDIKsi-gate, diprediksi LVO): acc=0.700 prec=0.500 rec=0.167 f1=0.250 auc=0.643 (n=20)
+3516.4s	294	  --- oracle-gate (pasien yg BENAR LVO) utk komparasi ---
+3516.4s	295	  stage2_laterality      (ORACLE-gate, GT LVO): acc=0.450 prec=0.450 rec=1.000 f1=0.621 auc=0.586 (n=20)
+3516.4s	296	  stage3_etiology        (ORACLE-gate, GT LVO): acc=0.700 prec=0.500 rec=0.167 f1=0.250 auc=0.643 (n=20)
+3516.5s	297	===== Bootstrap 95% CI — metrik level pasien (TEST, prediksi-gate) =====
+3521.9s	298	  stage1_lvo             (n=52)  F1 95%CI=[1.000, 1.000]  AUC 95%CI=[1.000, 1.000]
+3526.9s	299	  stage2_laterality      (n=20)  F1 95%CI=[0.400, 0.788]  AUC 95%CI=[0.298, 0.868]
+3531.7s	300	  stage3_etiology        (n=20)  F1 95%CI=[0.000, 0.667]  AUC 95%CI=[0.353, 0.906]
+3533.6s	301	Sesi berjalan 0.97 jam (limit GPU Kaggle ≈ 12 jam/sesi, kuota ≈ 30 jam/minggu).
+3533.6s	302	OUTPUT_DIR: /kaggle/working/outputs_v3
+3533.6s	303	Checkpoint (*.pt): 24 file
+3533.6s	304	  - stage1_lvo_convnext_tiny_best.pt (111.4 MB)
+3533.6s	305	  - stage1_lvo_convnext_tiny_last_full.pt (334.1 MB)
+3533.6s	306	  - stage1_lvo_efficientnet_b0_best.pt (16.3 MB)
+3533.6s	307	  - stage1_lvo_efficientnet_b0_last_full.pt (48.6 MB)
+3533.6s	308	  - stage1_lvo_resnet18_best.pt (44.8 MB)
+3533.6s	309	  - stage1_lvo_resnet18_last_full.pt (134.3 MB)
+3533.6s	310	  - stage1_lvo_resnet50_best.pt (94.4 MB)
+3533.6s	311	  - stage1_lvo_resnet50_last_full.pt (282.6 MB)
+3533.6s	312	  - stage2_laterality_convnext_tiny_best.pt (111.4 MB)
+3533.6s	313	  - stage2_laterality_convnext_tiny_last_full.pt (334.1 MB)
+3533.6s	314	  - stage2_laterality_efficientnet_b0_best.pt (16.3 MB)
+3533.6s	315	  - stage2_laterality_efficientnet_b0_last_full.pt (48.6 MB)
+3533.6s	316	  - stage2_laterality_resnet18_best.pt (44.8 MB)
+3533.6s	317	  - stage2_laterality_resnet18_last_full.pt (134.3 MB)
+3533.6s	318	  - stage2_laterality_resnet50_best.pt (94.4 MB)
+3533.6s	319	  - stage2_laterality_resnet50_last_full.pt (282.6 MB)
+3533.6s	320	  - stage3_etiology_convnext_tiny_best.pt (111.4 MB)
+3533.6s	321	  - stage3_etiology_convnext_tiny_last_full.pt (334.1 MB)
+3533.6s	322	  - stage3_etiology_efficientnet_b0_best.pt (16.3 MB)
+3533.6s	323	  - stage3_etiology_efficientnet_b0_last_full.pt (48.6 MB)
+3533.6s	324	  - stage3_etiology_resnet18_best.pt (44.8 MB)
+3533.6s	325	  - stage3_etiology_resnet18_last_full.pt (134.3 MB)
+3533.6s	326	  - stage3_etiology_resnet50_best.pt (94.4 MB)
+3533.6s	327	  - stage3_etiology_resnet50_last_full.pt (282.6 MB)
+3688.1s	328	✔ /kaggle/working/ncct_v3_weights.zip (2963.4 MB, 32 file)
+3688.1s	329	Download dari tab Output (kanan) → atau Save Version → Commit to Dataset.
+3688.1s	330	
+3688.1s	331	NEXT (di Kaggle):
+3688.1s	332	  1. Save Version → Save & Run All (Commit)
+3688.1s	333	  2. Buka tab Output → download ncct_v3_weights.zip, ATAU: Output → ... → Commit to Dataset
+3688.1s	334	  3. Sesi berikutnya: Add Input dataset weights → isi LOAD_WEIGHTS_DIR=/kaggle/input/<slug> → RESUME=True
+3688.1s	335	
+3688.1s	336	Ambil output via CLI lokal:  kaggle kernels output <user>/<slug> -p ./ncct_v3_out
+3694.3s	337	/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+3694.3s	338	  cells[i][c] = re.sub('\\\\\|', '|', cell)
+3694.5s	339	/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+3694.5s	340	  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+3695.1s	341	[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+3695.4s	342	[NbConvertApp] Writing 1478001 bytes to __notebook__.ipynb
+3697.7s	343	[NbConvertApp] Converting notebook __notebook__.ipynb to html
+3698.7s	344	[NbConvertApp] Support files will be in __results___files/
+3698.7s	345	[NbConvertApp] Making directory __results___files
+3698.7s	346	[NbConvertApp] Making directory __results___files
+3698.7s	347	[NbConvertApp] Making directory __results___files
+3698.7s	348	[NbConvertApp] Making directory __results___files
+3698.7s	349	[NbConvertApp] Making directory __results___files
+3698.7s	350	[NbConvertApp] Making directory __results___files
+3698.7s	351	[NbConvertApp] Making directory __results___files
+3698.7s	352	[NbConvertApp] Making directory __results___files
+3698.7s	353	[NbConvertApp] Making directory __results___files
+3698.7s	354	[NbConvertApp] Making directory __results___files
+3698.7s	355	[NbConvertApp] Writing 649610 bytes to __results__.html
